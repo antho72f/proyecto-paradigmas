@@ -1,14 +1,21 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import OpenAI from "openai";
 
 const apiKey = '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';
 const openai = new OpenAI({ apiKey: apiKey, dangerouslyAllowBrowser: true });
 
 export function Home() {
-  const [messages, setMessages] = useState([
-    { text: "Hola, ¿En qué te puedo ayudar hoy?", isUser: false },
-  ]);
+  const [messages, setMessages] = useState(() => {
+    const storedMessages = localStorage.getItem("messages");
+    return storedMessages ? JSON.parse(storedMessages) : [
+      { text: "Hola, ¿En qué te puedo ayudar hoy?", isUser: false },
+    ];
+  });
   const [inputValue, setInputValue] = useState("");
+
+  useEffect(() => {
+    localStorage.setItem("messages", JSON.stringify(messages));
+  }, [messages]);
 
   const sendMessage = async (e) => {
     e.preventDefault();
@@ -56,13 +63,12 @@ export function Home() {
         </button>
       </form>
 
-
       <style>
         {`
         .bottom-fixed {
           position: fixed;
           bottom: 0;
-          width: 100%;
+          width: 75%;
         }
         `}
       </style>

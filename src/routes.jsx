@@ -1,10 +1,10 @@
 import {
-  HomeIcon,
+  ChartBarIcon,
   UserCircleIcon,
-  TableCellsIcon,
-  InformationCircleIcon,
+  FolderOpenIcon,
+  Cog6ToothIcon,
   ServerStackIcon,
-  RectangleStackIcon,
+  RectangleStackIcon
 } from "@heroicons/react/24/solid";
 import { Home, Profile, Tables, Notifications } from "@/pages/dashboard";
 import { SignIn, SignUp } from "@/pages/auth";
@@ -18,27 +18,27 @@ export const routes = [
     layout: "dashboard",
     pages: [
       {
-        icon: <HomeIcon {...icon} />,
-        name: "dashboard",
-        path: "/home",
+        icon: <ChartBarIcon {...icon} />,
+        name: "chat",
+        path: "/chat",
         element: <Home />,
       },
       {
         icon: <UserCircleIcon {...icon} />,
-        name: "profile",
+        name: "perfil",
         path: "/profile",
         element: <Profile />,
       },
       {
-        icon: <TableCellsIcon {...icon} />,
-        name: "tables",
-        path: "/tables",
+        icon: <FolderOpenIcon {...icon} />,
+        name: "historial",
+        path: "/historial",
         element: <Tables />,
       },
       {
-        icon: <InformationCircleIcon {...icon} />,
-        name: "notifications",
-        path: "/notifications",
+        icon: <Cog6ToothIcon {...icon} />,
+        name: "configuracion",
+        path: "/configurations",
         element: <Notifications />,
       },
     ],
