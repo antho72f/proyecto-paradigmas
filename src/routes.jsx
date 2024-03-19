@@ -30,12 +30,6 @@ export const routes = [
         element: <Profile />,
       },
       {
-        icon: <FolderOpenIcon {...icon} />,
-        name: "historial",
-        path: "/historial",
-        element: <Tables />,
-      },
-      {
         icon: <Cog6ToothIcon {...icon} />,
         name: "configuracion",
         path: "/configurations",

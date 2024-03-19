@@ -72,7 +72,7 @@ export function Home() {
           </div>
         ))}
       </div>
-      <div className="bottom-fixed flex items-center justify-between px-4 py-2 border-t border-gray-300 w-full max-w-screen-lg mx-auto">
+      <div className="bottom-fixed flex items-center justify-between px-4 py-2 border-t border-gray-300 w-full max-w-screen-xl mx-auto bg-gray-700 rounded-t-lg">
         <div className="flex-grow flex items-center">
           <button
             className="px-2 py-1 bg-gray-300 text-xs md:text-sm text-black rounded-md hover:bg-gray-400 focus:outline-none focus:bg-gray-400 mr-2"
@@ -80,13 +80,13 @@ export function Home() {
           >
             Nuevo Chat
           </button>
-          <input
-            type="text"
-            placeholder="Mensaje..."
-            className="flex-grow px-2 py-1 border border-gray-300 rounded-md text-sm md:text-base focus:outline-none focus:border-blue-500"
-            value={inputValue}
-            onChange={(e) => setInputValue(e.target.value)}
-          />
+          <textarea
+          type="text"
+          placeholder="Mensaje..."
+          className="px-2 py-1 border border-gray-300 rounded-md text-sm md:text-base focus:outline-none focus:border-blue-500 flex-grow"
+          value={inputValue}
+          onChange={(e) => setInputValue(e.target.value)}
+        />
           <button
             type="submit"
             className="px-2 py-1 bg-blue-500 text-xs md:text-sm text-white rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600 ml-2"
