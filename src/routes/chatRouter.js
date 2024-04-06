@@ -1,6 +1,8 @@
 const express = require('express')
-const app = express()
+const chat = express.Router()
+const controller = require ('../controllers/chatController')
 
-app.get('/', (req, res) => {
-    res.send('Hello World!')
-  })
+chat.get('/',controller.chatController)
+
+
+module.exports = chat

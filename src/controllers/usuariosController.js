@@ -1,5 +1,7 @@
-const usuariosController = {
-    test: (req, res) =>{
-        res.send('esto no sirve, es un test');
-    }
+const controller = {}
+
+controller.usuariosController = (req, res) => {
+    res.send('connection established')
 }
+
+module.exports = controller

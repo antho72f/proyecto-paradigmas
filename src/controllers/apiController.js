@@ -1,5 +1,7 @@
-const apiController = {
-    test: (req, res) =>{
-        res.send('esto no sirve, es un test');
+const controller = {}
+    
+    controller.apiController = (req, res) =>{
+        res.send('connection good')
     }
-}
+
+module.exports = controller

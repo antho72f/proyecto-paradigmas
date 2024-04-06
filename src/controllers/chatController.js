@@ -1,5 +1,7 @@
-const chatController = {
-    test: (req, res) =>{
-        res.send('esto no sirve, es un test');
+const controller = {}
+    
+    controller.chatController = (req, res) =>{
+        res.send('connection good')
     }
-}
+
+module.exports = controller
