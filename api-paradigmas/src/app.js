@@ -3,6 +3,7 @@ import cors from "cors";
 import morgan from "morgan";
 
 import usuariosRoutes from "./routes/usuarios.routes.js";
+import openaiRoutes from "./routes/openai.routes.js";
 
 const app = express();
 
@@ -13,5 +14,6 @@ app.use(express.json());
 
 // Routes
 app.use("/api", usuariosRoutes);
+app.use("/api", openaiRoutes);
 
 export default app;
