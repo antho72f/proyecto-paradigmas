@@ -1,6 +1,11 @@
 @api=http://localhost:8000/api/usuarios
 @api2=http://localhost:8000/api/openai
-@Id=7
+@api3=http://localhost:8000/api/login
+@api4=http://localhost:8000/api/logout
+@api5=http://localhost:8000/api/verify
+@api6=http://localhost:8000/api/historial
+@api7=http://localhost:8000/api/usuarios/cambiarContrasena
+@Id=1
 
 ###
 GET {{api}}
@@ -10,9 +15,9 @@ POST {{api}} HTTP/1.1
 Content-Type: application/json
 
 {
-    "Nombre": "prueba2",
-    "Contrasena": "prueba2",
-    "Correo": "prueba2@gmail.com"
+    "Nombre": "prueba1",
+    "Contrasena": "prueba1",
+    "Correo": "prueba1@gmail.com"
 }
 
 ###
@@ -26,8 +31,7 @@ PUT {{api}}/{{Id}} HTTP/1.1
 Content-Type: application/json
 
 {
-    "Nombre": "prueba1p",
-    "Contrasena": "prueba1p",
+    "Nombre": "Thony",
     "Correo": "prueba1@gmail.com"
 }
 
@@ -36,5 +40,41 @@ POST {{api2}} HTTP/1.1
 Content-Type: application/json
 
 {
-    "inputValue": "Necesito generar una imagen de un pony colorido"
+    "inputValue": "Hola"
 }
+
+###
+POST {{api3}} HTTP/1.1
+Content-Type: application/json
+
+{
+    "Correo": "prueba1@gmail.com",
+    "Contrasena": "prueba1"
+}
+
+###
+POST {{api4}} HTTP/1.1
+Content-Type: application/json
+
+###
+GET {{api5}} HTTP/1.1
+
+###
+POST {{api6}} HTTP/1.1
+Content-Type: application/json
+
+{
+    "HistorialID": 1,
+    "Contenido": "Contenido del mensaje",
+    "UsuarioID": 1
+}
+
+###
+PUT {{api7}}/1 HTTP/1.1
+Content-Type: application/json
+
+{
+    "oldPassword": "prueba1",
+    "newPassword": "prueba2"
+}
+
