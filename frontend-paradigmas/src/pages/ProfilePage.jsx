@@ -23,14 +23,14 @@ export function ProfilePage() {
         }
         try {
             const response = await updateUserRequest({ _id: user.ID, Nombre: userNombre, Correo: userCorreo });
-            console.log(response);
+            //console.log(response);
             setUserUpdateMessage("Usuario actualizado correctamente.");
             setUserUpdateError(null);
             setTimeout(() => {
                 setUserUpdateMessage(null);
             }, 5000);
         } catch (error) {
-            console.error(error);
+            //console.error(error);
             setUserUpdateError("Error al actualizar usuario.");
         }
     };
@@ -47,14 +47,14 @@ export function ProfilePage() {
         }
         try {
             const response = await updatePasswordRequest({ _id: user.ID, oldPassword, newPassword });
-            console.log(response);
+            //console.log(response);
             setPasswordChangeMessage("Contraseña cambiada correctamente.");
             setPasswordChangeError(null);
             setTimeout(() => {
                 setPasswordChangeMessage(null);
             }, 5000);
         } catch (error) {
-            console.error(error);
+            //console.error(error);
             setPasswordChangeError("Error al cambiar la contraseña.");
         }
     };

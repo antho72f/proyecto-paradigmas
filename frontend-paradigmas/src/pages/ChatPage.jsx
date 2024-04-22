@@ -56,7 +56,7 @@ export function ChatPage() {
             setMessages(newMessages);
             setInputValue("");
         } catch (error) {
-            console.error("Error al enviar el mensaje o obtener la respuesta de OpenAI:", error);
+            //console.error("Error al enviar el mensaje o obtener la respuesta de OpenAI:", error);
         }
     };
 
@@ -77,7 +77,7 @@ export function ChatPage() {
             setHistorialId(messageId);
             setShowModal(false);
         } catch (error) {
-            console.error("Error al cargar el historial de mensajes:", error);
+            //console.error("Error al cargar el historial de mensajes:", error);
         }
     };
 

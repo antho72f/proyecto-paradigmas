@@ -14,7 +14,7 @@ export const ChatHistorialModal = ({ visible, onClose, onViewMessage }) => {
                     setHistorial(response.data);
                 })
                 .catch(error => {
-                    console.error('Error al obtener el historial del usuario:', error);
+                    //console.error('Error al obtener el historial del usuario:', error);
                 });
         }
     }, [visible, user]);
@@ -24,7 +24,7 @@ export const ChatHistorialModal = ({ visible, onClose, onViewMessage }) => {
             await deleteHistoryRequest(mensaje.ID); 
             setHistorial(prevHistorial => prevHistorial.filter(item => item.ID !== mensaje.ID));
         } catch (error) {
-            console.error('Error al eliminar el mensaje:', error);
+            //console.error('Error al eliminar el mensaje:', error);
         }
     };
 
